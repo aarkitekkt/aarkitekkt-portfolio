@@ -1,0 +1,14 @@
+.built {
+    background-color: maroon;
+    min-height: 100vh;
+    position: relative;
+}
+
+#builtContent {
+    background-color: tomato;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
