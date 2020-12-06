@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Navbar
+        homeAnchor="landing"
         devAnchor="dev"
         threeDAnchor="threeD"
         builtAnchor="built"

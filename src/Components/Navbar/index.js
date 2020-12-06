@@ -12,9 +12,15 @@ function Navbar(props) {
         else if (navState === "closed") { setNavState("open"); }
     }
 
+    function closeNav() {
+        if (navState === "open") { setNavState("closed"); }
+    }
+
     return (
         <nav className="navbar">
-            <div className={navState} id="aarkitekktButton">aark</div>
+            <div className={navState} id="aarkitekktButton">
+                <Link to={props.homeAnchor} smooth={true} duration={500} onClick={() => closeNav()}>logo</Link>
+            </div>
             <div className={navState} id="hamburger" onClick={() => toggleNav()}>
                 <div className={navState} id="line1"></div>
                 <div className={navState} id="line2"></div>
@@ -22,16 +28,16 @@ function Navbar(props) {
             </div>
             <ul className={navState} id="nav-links">
                 <li className="nav-link">
-                    <Link to={props.devAnchor} smooth={true} duration={750} onClick={() => toggleNav()}>dev</Link>
+                    <Link to={props.devAnchor} smooth={true} duration={500} onClick={() => closeNav()}>dev</Link>
                 </li>
                 <li className="nav-link">
-                    <Link to={props.threeDAnchor} smooth={true} duration={750} onClick={() => toggleNav()}>3d</Link>
+                    <Link to={props.threeDAnchor} smooth={true} duration={500} onClick={() => closeNav()}>3d</Link>
                 </li>
                 <li className="nav-link">
-                    <Link to={props.builtAnchor} smooth={true} duration={750} onClick={() => toggleNav()}>built</Link>
+                    <Link to={props.builtAnchor} smooth={true} duration={500} onClick={() => closeNav()}>built</Link>
                 </li>
                 <li className="nav-link">
-                    <Link to={props.aboutAnchor} smooth={true} duration={750} onClick={() => toggleNav()}>about</Link>
+                    <Link to={props.aboutAnchor} smooth={true} duration={500} onClick={() => closeNav()}>about</Link>
                 </li>
 
             </ul>

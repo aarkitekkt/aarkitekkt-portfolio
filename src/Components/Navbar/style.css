@@ -6,12 +6,9 @@ ul {
     padding: 0px;    
 }
 
-/* li {
-    margin: 20px;
-} */
-
 #aarkitekktButton {
     background-color: white;
+    cursor: pointer;
     width: 50px;
     height: 50px;
     border-radius: 25px;
@@ -32,9 +29,8 @@ ul {
 }
 
 #line1, #line2, #line3 {
-    transition-duration: .75s;
+    transition-duration: .5s;
     background-color: pink;
-    width: 30px;
     height: 3px;
     border-radius: 2px;
     position:fixed;
@@ -45,38 +41,43 @@ ul {
 #line1{
     top: 10px;
     right: 10px;
+    width: 20px;
 }
 
 #line2{
     top: 18px;
     right: 10px;
+    width: 30px;
 }
 
 #line3{
     top: 26px;
     right: 10px;
+    width: 25px;
 }
 
 
 
 #line1.open {
+    width: 30px;
     transform-origin: 0%;
     transform: rotate(45deg);
-    transition-duration: .75s;
+    transition-duration: .5s;
 }
 #line2.open {
     width: 0px;
-    transition-duration: .75s;
+    transition-duration: .5s;
 }
 #line3.open {
+    width: 30px;
     transform-origin: 0%;
     transform: rotate(-45deg) translate(-3px, 3px);
-    transition-duration: .75s;
+    transition-duration: .5s;
 }
 
 #nav-links {
     padding-top: 100px;
-    transition-duration: .75s;
+    transition-duration: .5s;
     position: fixed;
     z-index: 3;
     background: turquoise;
@@ -86,7 +87,7 @@ ul {
 }
 
 #nav-links.open {
-    transition-duration: .75s;
+    transition-duration: .5s;
     right: 0px;
 }
 
